@@ -1,0 +1,8 @@
+variable "password" {
+  default = "Mypassword"
+  sensitive = "true"
+}
+resource "local_file" "file" {
+  content = var.password
+  filename = "Myfile.txt"
+}
